@@ -1,128 +1,128 @@
-*{
-    margin: 0;
-    padding: 0;
+:root{
+  --yellow:#ffad00;
 }
-body{
-    background: #ececec;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ececec;
+}
+.rings{
+  position: relative;
 }
 .ring{
-    margin: auto;
-    position: absolute;
-    inset: 0;
-    border: 15px solid #ececec;
-    border-radius: 50%;
-    box-shadow: -10px -10px 15px rgba(255,255,255,0.3), 10px 10px 15px rgba(70,70,70,0.15), inset -10px -10px 15px rgba(255,255,255,0.3), inset 10px 10px 15px rgba(70,70,70,0.15);
-    background: #ececec;
-}
-.ring4{
-    width: 30px;
-    height: 30px;
-    -webkit-animation: glow4 2.5s infinite;
-            animation: glow4 2.5s infinite;
-}
-@-webkit-keyframes glow4{
-    0%{
-        background-color: #ececec;
-    }
-    20%{
-        background-color: #ffad00;
-    }
-    100%{
-        background-color: #ffad00;
-    }
-}
-@keyframes glow4{
-    0%{
-        background-color: #ececec;
-    }
-    20%{
-        background-color: #ffad00;
-    }
-    100%{
-        background-color: #ffad00;
-    }
-}
-.ring3{
-    width: 120px;
-    height: 120px;
-    -webkit-animation: glow3 2.5s infinite;
-            animation: glow3 2.5s infinite;
-}
-@-webkit-keyframes glow3{
-    20%{
-        background-color: #ececec;
-    }
-    40%{
-        background-color: #ffad00;
-    }
-    100%{
-        background-color: #ffad00;
-    }
-}
-@keyframes glow3{
-    20%{
-        background-color: #ececec;
-    }
-    40%{
-        background-color: #ffad00;
-    }
-    100%{
-        background-color: #ffad00;
-    }
-}
-.ring2{
-    width: 200px;
-    height: 200px;
-    -webkit-animation: glow2 2.5s infinite;
-            animation: glow2 2.5s infinite;
-}
-@-webkit-keyframes glow2{
-    40%{
-        background-color: #ececec;
-    }
-    60%{
-        background-color: #ffad00;
-    }
-    100%{
-        background-color: #ffad00;
-    }
-}
-@keyframes glow2{
-    40%{
-        background-color: #ececec;
-    }
-    60%{
-        background-color: #ffad00;
-    }
-    100%{
-        background-color: #ffad00;
-    }
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(70, 70, 70, 0.15), inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(70, 70, 70, 0.15);
+  border: 15px solid #ececec;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ring1{
-    width: 280px;
-    height: 280px;
-    -webkit-animation: glow1 2.5s infinite;
-            animation: glow1 2.5s infinite;
-}
-@-webkit-keyframes glow1{
-    60%{
-        background-color: #ececec;
-    }
-    80%{
-        background-color: #ffad00;
-    }
-    100%{
-        background-color: #ffad00;
-    }
+  width: 28rem;
+  height: 28rem;
+  animation: glow1 2.5s infinite;
 }
 @keyframes glow1{
-    60%{
-        background-color: #ececec;
-    }
-    80%{
-        background-color: #ffad00;
-    }
-    100%{
-        background-color: #ffad00;
-    }
+  60%{
+    background-color: #ececec;
+  }
+  80%{
+    background-color: var(--yellow);
+  }
+  100%{
+    background-color: var(--yellow);
+  }
+}
+.ring2{
+  width: 20rem;
+  height: 20rem;
+  animation: glow2 2.5s infinite;
+}
+@keyframes glow2{
+  40%{
+    background-color: #ececec;
+  }
+  60%{
+    background-color: var(--yellow);
+  }
+  100%{
+    background-color: var(--yellow);
+  }
+}
+.ring3{
+  width: 12rem;
+  height: 12rem;
+  animation: glow3 2.5s infinite;
+}
+@keyframes glow3{
+  20%{
+    background-color: #ececec;
+  }
+  40%{
+    background-color: var(--yellow);
+  }
+  100%{
+    background-color: var(--yellow);
+  }
+}
+.ring4{
+  width: 4rem;
+  height: 4rem;
+  animation: glow4 2.5s infinite;
+}
+@keyframes glow4{
+  0%{
+    background-color: #ececec;
+  }
+  20%{
+    background-color: var(--yellow);
+  }
+  100%{
+    background-color: var(--yellow);
+  }
+}
+.choose-theme{
+  display: flex;
+  margin-top: 5rem;
+  column-gap: 10px;
+}
+.theme{
+  width: 3rem;
+  height: 3rem;
+  border: 5px solid #ececec;
+  border-radius: 50%;
+}
+.theme:hover{
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+.theme1{
+  background-color: #ffad00;
+}
+.theme2{
+  background-color: #01c5c4;
+}
+.theme3{
+  background-color: #ffa5a5;
+}
+.theme4{
+  background-color: #6eff00;
+}
+.theme5{
+  background-color: #f09ae9;
+}
+.theme6{
+  background-color: #e7305b;
+}
+.theme7{
+  background-color: #ff0000;
 }
